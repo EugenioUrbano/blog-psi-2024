@@ -10,3 +10,6 @@ class Genero(models.Model):
     descricao_5 = models.TextField()
     descricao_6 = models.TextField()
     descricao_7 = models.TextField()
+
+    def __str__(self):
+        return self.nome

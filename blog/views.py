@@ -1,5 +1,6 @@
 from django.shortcuts import render
+from models import Genero
 
 def index(request):
-    generos= {"titulo": "titulo" }
-    return render(request, 'index.html')
+    context = Genero.objects.all()
+    return render(request, 'index.html', context)
