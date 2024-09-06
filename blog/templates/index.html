@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+<h1>oi</h1>
 {% for genero in Generos%}
+
 <figure class="group">
   <div><a class="imgover" href="#"><img src="{}" alt=""></a></div>
     <figcaption>
-      <p>{{ generos.nome }}</p>
-      <li>{{ generos.descricao_1 }}</li>
-      <li>{{ generos.descricao_2 }}</li>
-      <li>{{ generos.descricao_3 }}</li>
-      <li>{{ generos.descricao_4 }}</li>
-      <li>{{ generos.descricao_5 }}</li>
-      <li>{{ generos.descricao_6 }}</li>
-      <li>{{ generos.descricao_7 }}</li>
+      <p>{{ genero.nome }}</p>
+      <li>{{ genero.descricao_1 }}</li>
+      <li>{{ genero.descricao_2 }}</li>
+      <li>{{ genero.descricao_3 }}</li>
+      <li>{{ genero.descricao_4 }}</li>
+      <li>{{ genero.descricao_5 }}</li>
+      <li>{{ genero.descricao_6 }}</li>
+      <li>{{ genero.descricao_7 }}</li>
       <footer></footer>
     </figcaption>
 </figure>

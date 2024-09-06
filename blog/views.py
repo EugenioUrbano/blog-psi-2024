@@ -3,9 +3,9 @@ from .models import Genero
 
 def index(request):
     generos = Genero.objects.all()
-    
+
     context = {
-        "Genero": generos,
+        "Generos": generos,
     }
     return render(request, 'index.html', context)
 
