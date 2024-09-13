@@ -1,23 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h1>oi</h1>
+
 {% for genero in Generos%}
 
-<figure class="group">
-  <div><a class="imgover" href="#"><img src="{}" alt=""></a></div>
-    <figcaption>
-      <p>{{ genero.nome }}</p>
-      <li>{{ genero.descricao_1 }}</li>
-      <li>{{ genero.descricao_2 }}</li>
-      <li>{{ genero.descricao_3 }}</li>
-      <li>{{ genero.descricao_4 }}</li>
-      <li>{{ genero.descricao_5 }}</li>
-      <li>{{ genero.descricao_6 }}</li>
-      <li>{{ genero.descricao_7 }}</li>
-      <footer></footer>
-    </figcaption>
-</figure>
+<div class="col">
+  <div class="card shadow-sm">
+    {% if genero.imagem %}
+    <img src="{{ genero.imagem.url }}" alt="">
+    {% else %}
+    <img src="{%static 'falha.jpg'%}" alt="">
+    {% endif %}
+    <div class="card-body">
+      <h3 class="card-text">{{ genero.nome }}</h3>
+      <p class="card-text">{{ genero.descricao_1 }}</p>
+      <li class="card-text">{{ genero.descricao_2 }}</li>
+      <li class="card-text">{{ genero.descricao_3 }}</li>
+      <li class="card-text">{{ genero.descricao_4 }}</li>
+      <li class="card-text">{{ genero.descricao_5 }}</li>
+      <li class="card-text">{{ genero.descricao_6 }}</li>
+      <li class="card-text">{{ genero.descricao_7 }}</li>
+    </div>
+  </div>
+</div>
+
+
 {% endfor %}
         </div>
         <div class="clear"></div>
