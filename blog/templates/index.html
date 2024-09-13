@@ -1,31 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  {% for genero in Generos%}
 
-{% for genero in Generos%}
-
-<div class="col">
-  <div class="card shadow-sm">
-    {% if genero.imagem %}
-    <img src="{{ genero.imagem.url }}" alt="">
-    {% else %}
-    <img src="{%static 'falha.jpg'%}" alt="">
-    {% endif %}
-    <div class="card-body">
-      <h3 class="card-text">{{ genero.nome }}</h3>
-      <p class="card-text">{{ genero.descricao_1 }}</p>
-      <li class="card-text">{{ genero.descricao_2 }}</li>
-      <li class="card-text">{{ genero.descricao_3 }}</li>
-      <li class="card-text">{{ genero.descricao_4 }}</li>
-      <li class="card-text">{{ genero.descricao_5 }}</li>
-      <li class="card-text">{{ genero.descricao_6 }}</li>
-      <li class="card-text">{{ genero.descricao_7 }}</li>
+  <div class="col">
+    <div class="card shadow-sm">
+      {% if genero.imagem %}
+      <img src="{{ genero.imagem.url }}" alt="">
+      {% else %}
+      <img src="{%static 'falha.jpg'%}" alt="">
+      {% endif %}
+      <div class="card-body">
+        <h3 class="card-text">{{ genero.nome }}</h3>
+        <p class="card-text">{{ genero.descricao_1 }}</p>
+        <li class="card-text">{{ genero.descricao_2 }}</li>
+        <li class="card-text">{{ genero.descricao_3 }}</li>
+        <li class="card-text">{{ genero.descricao_4 }}</li>
+        <li class="card-text">{{ genero.descricao_5 }}</li>
+        <li class="card-text">{{ genero.descricao_6 }}</li>
+        <li class="card-text">{{ genero.descricao_7 }}</li>
+      </div>
     </div>
   </div>
+  {% endfor %}
 </div>
-
-
-{% endfor %}
         </div>
         <div class="clear"></div>
       </main>
