@@ -4,20 +4,20 @@
 <h1>oi</h1>
 {% for genero in Generos%}
 
-<figure class="group">
-  <div><a class="imgover" href="#"><img src="{}" alt=""></a></div>
-    <figcaption>
-      <p>{{ genero.nome }}</p>
-      <li>{{ genero.descricao_1 }}</li>
+<div>
+    <h3>{{ genero.nome }}</h6>
+    <img src="{{ genero.imagem }}" alt="">
+    <div class="group align-items-lg-center">
+      <p>{{ genero.descricao_1 }}</p>
       <li>{{ genero.descricao_2 }}</li>
       <li>{{ genero.descricao_3 }}</li>
       <li>{{ genero.descricao_4 }}</li>
       <li>{{ genero.descricao_5 }}</li>
       <li>{{ genero.descricao_6 }}</li>
       <li>{{ genero.descricao_7 }}</li>
-      <footer></footer>
-    </figcaption>
-</figure>
+    </div>
+      
+</div>
 {% endfor %}
         </div>
         <div class="clear"></div>
