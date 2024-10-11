@@ -4,6 +4,32 @@
 
 {% block content %}
 <!-- Post -->
+{%for post in Posts%}
+
+<div class="album py-5 bg-bg-body-tertiary">
+    <div class="container">
+
+      <div class="row">
+            <div class="col-3">
+                <div class="card shadow-sm bg-dark text-white">
+                    {% if post.imagem %}
+                    <img src="{{ post.imagem.url }}" alt="">
+                    {% else %}
+                    <img src="{%static 'falha.jpg'%}" alt="">
+                    {% endif %}
+                    <div class="card-body">
+                      <h3 class="card-text">{{ post.titulo }}</h3>
+                      <p class="card-text">{{ post.descricao }}</p>
+                    </div>
+                </div>
+            </div >
+        </div>
+    </div>
+</div>
+{%endfor%}
+
+
+
 
 <div class="album py-5 bg-bg-body-tertiary">
   <div class="container">
