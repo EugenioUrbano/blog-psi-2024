@@ -10,90 +10,40 @@
 </head>
 
 <body>
-  <header class="justify-content-center p-3 text-bg-dark">
-    <img src="{% static 'img/logo-ifrn.png'%}" alt="">
-        
-  </header> 
-  <div class="p-3 mb-2 bg-secondary text-white"> 
+  <!-- Header -->
+  <header class="text-bg-dark  d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+      <a href="{% url 'index' %}" class="nav-link"><img src="{% static 'img/logo-ifrn.png'%}" alt=""></a>
+      <h2>Generos na Adolescência</h2>
+  <div class="col-md-3 text-end">
+      <button type="button" class="btn btn-light rounded-pill px-2"><a href="{% url 'genero' %}" class="nav-link">Masculino</a></button>
+      <button type="button" class="btn btn-light rounded-pill px-2"><a href="{% url 'genero' %}" class="nav-link">Feminino</a></button>
+  </div> 
+  </header>
+  <div class="p-3 mb-2 bg-secondary text-white ">
     <h3 class="heading">Desenvolvimento do Sistema Genital durante a Adolescência</h3>
     <p>A puberdade é o periodo em que o corpo do ser humano é conduzido à maturidade sexual, acontecimento que torna o indivíduo capaz de se reproduzir. Ela acopla um amplo conjunto de modificações corporais e emocionais que ocorrem durante a adolescência, na transição entre a infância e a idade adulta. Nessa fase, também surgem muitos questionamentos e conflitos pessoais. Por isso, a puberdade é marcada como um período de intensas mudanças físicas e comportamentais.</p>
   </div>
-  <div class="wrapper row3 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
-    <main class="hoc container clear"> 
-      <div class="sectiontitle">
-      <h6 class="heading font-x3">Puberdade Masculina e Feminina</h6>
-      </div>
-      <div class="posts">
-        {% block content %}
-        <p>Muita coisa</p>
-        {% endblock %}
-        </div>
-      <div class="clear"></div>
-    </main>
-    </div>
+  <!-- Conteudo da Pagina Inicial -->
+  {% block content%}
 
-  <div class="wrapper row3 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
-    <section class="hoc container clear"> 
-      <div class="sectiontitle">
-        <h6 class="heading font-x3">Outros topicos</h6>
-        </div>
-      <ul class="nospace group latest">
-        <li class="one_third first">
-          <article>
-            <h6><a>Problemas típicos encontrados na puberdade</a></h6>
-            <p>
-              Preocupação excessiva com a aparência que pode resultar em baixa autoestima, dúvidas sobre a própria identidade, necessidade de se modificar sua personalidade para se encaixar,
-              quebra da segurança criada pela infância, pressão para agir de determinada maneira ou para obter excelência escolar,
-              desenvolvimento de depressão,ansiedade e fobias, preocupação com reputação e popularidade, sexo ou engajamento em atividades sexuais sem métodos preventivos, modificação da dinâmica entre amizades feitas na infância, isolamento social,frustração exagerada ao não atingir objetivos, necessidade de mostrar amadurecimento, desejo de se manter afastado dos pais e familiares, reclusão de emoções e sentimentos, bullying</p>
-            </article>
-          </li>
-        <li class="one_third">
-          <article>
-            <h6><a>Alterações corporais durante a puberdade</a></h6>
-            <p>De modo geral, as principais mudanças que ocorrem durante a puberdade são:
-              Aceleração no crescimento ósseo;
-              Desenvolvimento das características sexuais secundárias;
-              Intensificação da atividade hormonal;
-              Amadurecimento dos testículos e ovários;
-              quisição da capacidade de reprodução.
-              Em termos biológicos, a puberdade feminina e masculina têm início quando a glândula pituitária estimula o aumento da produção de hormônios sexuais pelas gônadas
-              </p>
-            </article>
-        </li>
-        <li class="one_third">
-          <article>
-            <h6><a>Como a puberdade afeta o emocional?</a></h6>
-            <p>As mudanças físicas, hormonais e sexuais são facilmente percebidas por estarem à vista. Durante esse período também ocorrem alterações neurológicas, cognitivas, sociais e psicológicas. Com tantos aspectos novos para se acostumar, é compreensível que os adolescentes se comportem de maneiras inusitadas ou não saibam como administrá-los. Os seus achados podem levá-lo a abandonar esportes ou atividades praticadas desde a infância, ou até mesmo amizades formadas quando criança. Por outro lado, o adolescente pode ter sentimentos de inadequação e de solidão, baixa autoestima, estresse, vergonha do corpo ou personalidade e medo do aumento de responsabilidades. 
-              </p>
-            </article>
-        </li>
-      </ul>
-        
-    </section>
-    </div>
-    <div class="wrapper row3 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
-      <h4 class="align-items-center">Imagems relacionadas aos topicos</h6>
-      <div>
-        <img src="{% static 'img/mudancas.jpg'%}" class="rounded mx-auto d-block" alt="" width="500" height="500">
-        <h6>Mudanças corporais durante a puberdade feminina e masculina</h6>
-      </div>
-      <div>
-        <img src="{% static 'img/dados.jpg'%}" class="rounded mx-auto d-block" alt="" >
-        <h6>Problemas emocionais na pré-adolecencia</h6>
-      </div>
-    </div>  
-    </div>
-    <div class="wrapper row4 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
+  {% endblock %}
+  <!-- Conteudo Paginas Generos-->
+  {% block content_2%}
+
+  {% endblock %}
+  <!-- Footer -->
+  <div class="bg-dark-subtle text-dark-emphasis row mb-3 text-center">
+    <div class="wrapper row4 p-3 mb-2 ">
       <footer id="footer" class="hoc clear">
         <div class="center btmspace-50"> 
-          
+            
           <h6 class="heading">Fontes</h6>
           <a class="nospace"href="https://www.todamateria.com.br/puberdade/">Referencia 1</a>
           <a class="nospace"href="https://www.vittude.com/blog/puberdade-adolescencia-terapia-ajuda-mudancas/">Referencia 2</a>
           <a class="nospace"href="https://acta-ape.org/article/problemas-emocionais-e-comportamentais-em-pre-adolescentes-classificados-como-recem-nascidos-de-risco/">Referencia 3</a>
         </div>
         <hr class="btmspace-50">
-      
+        
       </footer>
     </div>
     <div class="wrapper row5 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
@@ -101,5 +51,5 @@
         <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - </p>
       </div>
     </div>
+  </div>   
 </body>
-</html>

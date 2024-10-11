@@ -3,26 +3,79 @@
 
 
 {% block content %}
+<!-- Post -->
+
+<div class="album py-5 bg-bg-body-tertiary">
+  <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
-      {% for genero in Generos%}
-        <div class="col">
+      {% for post in Posts%}
+      <div class="col">
           <div class="card shadow-sm">
-          {% if genero.imagem %}
-          <img src="{{ genero.imagem.url }}" alt="">
+          {% if post.imagem %}
+          <img src="{{ post.imagem.url }}" alt="">
           {% else %}
           <img src="{%static 'falha.jpg'%}" alt="">
           {% endif %}
           <div class="card-body">
-            <h3 class="card-text">{{ genero.nome }}</h3>
-            <p class="card-text">{{ genero.descricao_1 }}</p>
-            <li class="card-text">{{ genero.descricao_2 }}</li>
-            <li class="card-text">{{ genero.descricao_3 }}</li>
-            <li class="card-text">{{ genero.descricao_4 }}</li>
-            <li class="card-text">{{ genero.descricao_5 }}</li>
-            <li class="card-text">{{ genero.descricao_6 }}</li>
-            <li class="card-text">{{ genero.descricao_7 }}</li>
+          <h3 class="card-text">{{ post.titulo }}</h3>
+          <p class="card-text">{{ post.descricao }}</p>
           </div>
-        </div>
-        </div>
+      </div>
       {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper row3 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
+  <section class="hoc container clear"> 
+    <div class="sectiontitle">
+      <h2 class="text-center font-x3">Topicos</h2>
+      </div>
+    <ul class="nospace group latest">
+      <li class="one_third first">
+        <article>
+          <h6><a>Problemas típicos encontrados na puberdade</a></h6>
+          <p>
+            Preocupação excessiva com a aparência que pode resultar em baixa autoestima, dúvidas sobre a própria identidade, necessidade de se modificar sua personalidade para se encaixar,
+            quebra da segurança criada pela infância, pressão para agir de determinada maneira ou para obter excelência escolar,
+            desenvolvimento de depressão,ansiedade e fobias, preocupação com reputação e popularidade, sexo ou engajamento em atividades sexuais sem métodos preventivos, modificação da dinâmica entre amizades feitas na infância, isolamento social,frustração exagerada ao não atingir objetivos, necessidade de mostrar amadurecimento, desejo de se manter afastado dos pais e familiares, reclusão de emoções e sentimentos, bullying</p>
+          </article>
+        </li>
+      <li class="one_third">
+        <article>
+          <h6><a>Alterações corporais durante a puberdade</a></h6>
+          <p>De modo geral, as principais mudanças que ocorrem durante a puberdade são:
+            Aceleração no crescimento ósseo;
+            Desenvolvimento das características sexuais secundárias;
+            Intensificação da atividade hormonal;
+            Amadurecimento dos testículos e ovários;
+            quisição da capacidade de reprodução.
+            Em termos biológicos, a puberdade feminina e masculina têm início quando a glândula pituitária estimula o aumento da produção de hormônios sexuais pelas gônadas
+            </p>
+          </article>
+      </li>
+      <li class="one_third">
+        <article>
+          <h6><a>Como a puberdade afeta o emocional?</a></h6>
+          <p>As mudanças físicas, hormonais e sexuais são facilmente percebidas por estarem à vista. Durante esse período também ocorrem alterações neurológicas, cognitivas, sociais e psicológicas. Com tantos aspectos novos para se acostumar, é compreensível que os adolescentes se comportem de maneiras inusitadas ou não saibam como administrá-los. Os seus achados podem levá-lo a abandonar esportes ou atividades praticadas desde a infância, ou até mesmo amizades formadas quando criança. Por outro lado, o adolescente pode ter sentimentos de inadequação e de solidão, baixa autoestima, estresse, vergonha do corpo ou personalidade e medo do aumento de responsabilidades. 
+            </p>
+          </article>
+      </li>
+    </ul>
+      
+  </section>
+  </div>
+  <div class="wrapper row3 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
+    <h4 class="align-items-center">Imagems relacionadas aos topicos</h6>
+    <div>
+      <img src="{% static 'img/mudancas.jpg'%}" class="rounded mx-auto d-block" alt="" width="500" height="500">
+      <h6>Mudanças corporais durante a puberdade feminina e masculina</h6>
+    </div>
+    <div>
+      <img src="{% static 'img/dados.jpg'%}" class="rounded mx-auto d-block" alt="" >
+      <h6>Problemas emocionais na pré-adolecencia</h6>
+    </div>
+  </div> 
+</div>
 {% endblock %}

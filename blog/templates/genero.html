@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content_2%}
+<div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+        {% for genero in Generos%}
+        <div class="col">
+            <div class="card shadow-sm">
+            {% if genero.imagem %}
+            <img src="{{ genero.imagem.url }}" alt="">
+            {% else %}
+            <img src="{%static 'falha.jpg'%}" alt="">
+            {% endif %}
+            <div class="card-body">
+            <h3 class="card-text">{{ genero.titulo }}</h3>
+            <p class="card-text">{{ genero.descricao_1 }}</p>
+            <li class="card-text">{{ genero.descricao_2 }}</li>
+            <li class="card-text">{{ genero.descricao_3 }}</li>
+            <li class="card-text">{{ genero.descricao_4 }}</li>
+            <li class="card-text">{{ genero.descricao_5 }}</li>
+            <li class="card-text">{{ genero.descricao_6 }}</li>
+            <li class="card-text">{{ genero.descricao_7 }}</li>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,7 +1,7 @@
 from django.db import models
 
 class Genero(models.Model):
-    nome = models.CharField(max_length=30)
+    titulo = models.CharField(max_length=30)
 
     descricao_1 = models.TextField(max_length=600)
     descricao_2 = models.TextField(max_length=600)
@@ -13,4 +13,12 @@ class Genero(models.Model):
     imagem = models.ImageField(blank = True)
 
     def __str__(self):
-        return self.nome
+        return self.titulo
+
+class Post(models.Model):
+    imagem = models.ImageField(blank = True)
+    titulo = models.CharField(max_length=30)
+    descricao = models.TextField(max_length=600)
+
+    def __str__(self):
+        return self.titulo
