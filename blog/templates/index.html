@@ -4,53 +4,49 @@
 
 {% block content %}
 <!-- Post -->
-{%for post in Posts%}
 
+{% for post in Posts%}
 <div class="album py-5 bg-bg-body-tertiary">
-    <div class="container">
+  <div class="container">
 
-      <div class="row">
-            <div class="col-3">
-                <div class="card shadow-sm bg-dark text-white">
-                    {% if post.imagem %}
-                    <img src="{{ post.imagem.url }}" alt="">
-                    {% else %}
-                    <img src="{%static 'falha.jpg'%}" alt="">
-                    {% endif %}
-                    <div class="card-body">
-                      <h3 class="card-text">{{ post.titulo }}</h3>
-                      <p class="card-text">{{ post.descricao }}</p>
-                    </div>
-                </div>
-            </div >
-        </div>
-    </div>
+    <div class="row">
+          <div class="col-3">
+              <div class="card shadow-sm bg-dark text-white">
+                  <img src="{{ post.imagem.url }}" class="img-thumbnail" alt="{{ post.titulo }}" >
+                  <div class="card-body">
+                      {{ post.titulo }}<br>
+                      {{ post.descricao }}<br>
+                  </div>
+              </div>
+          </div >
+      </div>
+  </div>
 </div>
-{%endfor%}
-
-
-
+{% endfor %}
 
 <div class="album py-5 bg-bg-body-tertiary">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
-      {% for post in Posts%}
-      <div class="col">
-          <div class="card shadow-sm">
-          {% if post.imagem %}
-          <img src="{{ post.imagem.url }}" alt="">
-          {% else %}
-          <img src="{%static 'falha.jpg'%}" alt="">
-          {% endif %}
-          <div class="card-body">
-          <h3 class="card-text">{{ post.titulo }}</h3>
-          <p class="card-text">{{ post.descricao }}</p>
-          </div>
+      <div>
+        {% for post in Posts%}
+        <div class="col">
+            <div class="card shadow-sm">
+            {% if post.imagem %}
+            <img src="{{ post.imagem.url }}" alt="">
+            {% else %}
+            <img src="{%static 'falha.jpg'%}" alt="">
+            {% endif %}
+            <div class="card-body">
+            <h3 class="card-text">{{ post.titulo }}</h3>
+            <p class="card-text">{{ post.descricao }}</p>
+            </div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 </div>
+
 
 
 <div class="wrapper row3 p-3 mb-2 bg-dark-subtle text-dark-emphasis">
